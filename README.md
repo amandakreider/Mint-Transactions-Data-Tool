@@ -1,6 +1,6 @@
 # Mint Transaction Data Conversion Tool
  
-This project contains Python programs to convert exported transactions and accounts data from Mint.com (Intuit) to csv files.
+This project contains Python programs to convert exported transactions and accounts data from Mint.com (Intuit) to usable .csv files.
 
 It is meant to help users convert their Mint data to a usable format now that the Mint app has been shut down.
 
