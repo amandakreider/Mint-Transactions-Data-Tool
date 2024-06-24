@@ -40,7 +40,7 @@ for file in os.listdir(directory):
 # Loop over transactions files to print a list of possible keys
 for thispath in paths:
 
-	myfile = open(thispath).read()
+	myfile = open(thispath, encoding="UTF-8").read()
 	data = json.loads(myfile)
 
 	for num in range(len(data)):
@@ -50,17 +50,17 @@ for thispath in paths:
 		for i in range(len(mylist)):
 
 			if mylist[i] in Dup:
-			    ItemNumber = Dup[mylist[i]]
+				ItemNumber = Dup[mylist[i]]
 			else:
-			    mykeys.append(mylist[i])
-			    Dup[mylist[i]] = ItemNumber = len(mykeys)-1		
+				mykeys.append(mylist[i])
+				Dup[mylist[i]] = ItemNumber = len(mykeys)-1		
 
 print(mykeys)
 
 # Loop over transactions files to save values from relevant keys 
 for thispath in paths:
 
-	myfile = open(thispath).read()
+	myfile = open(thispath, encoding="UTF-8").read()
 	data = json.loads(myfile)
 
 	# Loop over transactions
